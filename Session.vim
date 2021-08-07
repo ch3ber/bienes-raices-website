@@ -9,14 +9,14 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +152 index.html
-badd +7 src/scss/base/_botones.scss
-badd +35 ./src/scss/base/_mixins.scss
-badd +10 ./src/scss/base/_utilidades.scss
+badd +1 src/scss/app.scss
+badd +93 contacto.html
+badd +32 src/scss/layout/_formularios.scss
 argglobal
 %argdel
-edit index.html
+edit src/scss/layout/_formularios.scss
 argglobal
-balt ./src/scss/base/_utilidades.scss
+balt contacto.html
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -27,12 +27,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 152 - ((19 * winheight(0) + 19) / 39)
+let s:l = 32 - ((28 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 152
-normal! 052|
+keepjumps 32
+normal! 019|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
