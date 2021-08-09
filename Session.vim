@@ -8,17 +8,18 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +19 index.html
-badd +1 src/scss/app.scss
-badd +93 contacto.html
-badd +33 src/scss/layout/_formularios.scss
-badd +22 src/scss/layout/_navegacion.scss
-badd +14 src/js/app.js
+badd +11 index.html
+badd +8 src/scss/app.scss
+badd +19 src/scss/layout/_formularios.scss
+badd +43 src/scss/layout/_navegacion.scss
+badd +39 src/scss/base/_darkMode.scss
+badd +13 src/scss/layout/_footer.scss
+badd +10 src/scss/internas/_nosotros.scss
 argglobal
 %argdel
-edit src/scss/layout/_navegacion.scss
+edit src/scss/layout/_footer.scss
 argglobal
-balt src/js/app.js
+balt src/scss/layout/_navegacion.scss
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -29,12 +30,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 22 - ((19 * winheight(0) + 19) / 38)
+let s:l = 13 - ((12 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 22
-normal! 025|
+keepjumps 13
+normal! 018|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0&& getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
