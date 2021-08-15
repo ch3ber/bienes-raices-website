@@ -1,10 +1,13 @@
-<?php include 'includes/header.php' ?>
+<?php 
+   require 'includes/funciones.php';
+   incluirTemplate('header');
+?>
 
    <main class="conenedor seccion">
       <h1>Titulo pagina</h1>
    </main>
 
-   <?php include 'includes/footer.php' ?>
+   <?php incluirTemplate('footer'); ?>
    
    <script src="build/js/bundle.min.js"></script>
 </body>

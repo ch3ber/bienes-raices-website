@@ -1,5 +1,7 @@
-<<?php include 'includes/header.php' ?>
-
+<?php 
+   require 'includes/funciones.php';
+   incluirTemplate('header');
+?>
    <main class="contenedor seccion">
 
       <h2>Casas y Departamentos en Venta</h2>
@@ -195,7 +197,7 @@
       </div> <!--.contenedor-anuncios-->
    </main>
 
-   <?php include 'includes/footer.php' ?>
+   <?php incluirTemplate('footer'); ?>
 
    <script src="build/js/bundle.min.js"></script>
 </body>

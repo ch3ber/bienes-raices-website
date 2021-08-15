@@ -1,6 +1,6 @@
 <?php 
-   $inicio = true;
-   include 'includes/header.php'
+   require 'includes/funciones.php';
+   incluirTemplate('header', $inicio = true);
 ?>
 
    <main class="conenedor seccion">
@@ -198,7 +198,7 @@
       </section>
    </div>
 
-   <?php include 'includes/footer.php' ?>
+   <?php incluirTemplate('footer'); ?>
    
    <script src="build/js/bundle.min.js"></script>
 </body>
