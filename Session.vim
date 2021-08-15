@@ -8,7 +8,7 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +11 index.html
+badd +11 index.php
 badd +8 src/scss/app.scss
 badd +19 src/scss/layout/_formularios.scss
 badd +43 src/scss/layout/_navegacion.scss
